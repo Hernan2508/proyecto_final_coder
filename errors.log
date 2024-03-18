@@ -241,3 +241,6 @@
 {"level":"info","message":"Logger middleware applied for GET on / - 2024-03-18T00:57:21.198Z","timestamp":"2024-03-18T00:57:21.199Z"}
 {"level":"debug","message":"Este es un mensaje de prueba desde el logger de DEVELOPMENT.","timestamp":"2024-03-18T04:20:44.186Z"}
 {"level":"debug","message":"Este es un mensaje de prueba desde el logger de DEVELOPMENT.","timestamp":"2024-03-18T04:23:15.842Z"}
+{"level":"debug","message":"Este es un mensaje de prueba desde el logger de DEVELOPMENT.","timestamp":"2024-03-18T04:29:58.276Z"}
+{"level":"debug","message":"Este es un mensaje de prueba desde el logger de DEVELOPMENT.","timestamp":"2024-03-18T04:32:22.096Z"}
+{"level":"debug","message":"Este es un mensaje de prueba desde el logger de DEVELOPMENT.","timestamp":"2024-03-18T04:33:37.321Z"}

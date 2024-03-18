@@ -8,7 +8,7 @@ import toAsyncRouter from 'async-express-decorator';
 const router = toAsyncRouter(Router());
 
 //? Construcción de nuestro servicio o endpoint MongoDB
-router.get('/', addLogger, getUsers); // EP1. Obtener Productos
-router.put('/:id', addLogger, updateUser); //EP4. Actualizar un Producto por Id isAdmin
+router.get('/', addLogger, isAdmin, getUsers); // EP1. Obtener Productos
+router.put('/:id', addLogger, isAdmin, updateUser); //EP4. Actualizar un Producto por Id isAdmin
 
 export default router;
