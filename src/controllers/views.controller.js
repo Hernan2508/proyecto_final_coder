@@ -2,6 +2,7 @@
 import Carts from "../dao/dbManagers/carts.manager.js"; */
 import * as productsService from '../services/products.service.js'
 import * as cartsService from '../services/carts.service.js'
+import * as usersService from '../services/users.service.js'
 
 //Creamos la instacia de la clase
 /* const productsManager = new Products();
@@ -64,6 +65,17 @@ const getCarts = async (req, res) =>{
     }
 };
 
+// EP8. Renderiza Usuarios
+const getUsers = async (req, res) =>{
+  try {
+      const users = await usersService.getUsers();
+      res.render('users', { users });
+
+  } catch (error) {
+      console.error(error.message);
+  }
+};
+
 // EP4. Obtienes el detalle del carrito por Id
 const getCartById = async (req, res) => {
     try {
@@ -107,5 +119,5 @@ const getProfile = (req, res) =>{
 
 export {
     getProducts, getProductById, getCarts, getCartById, getChat, getRegister,
-    getLogin, getProfile
+    getLogin, getProfile, getUsers
 }

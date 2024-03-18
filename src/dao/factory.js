@@ -7,6 +7,7 @@ let Carts;
 let Products;
 let Messages;
 let Tickets;
+let Users;
 
 try {
     switch (persistence) {
@@ -18,10 +19,12 @@ try {
             const { default: ProductsMongo } = await import('./mongo/classes/products.dao.js');
             const { default: MessagesMongo } = await import('./mongo/classes/messages.dao.js');
             const { default: TicketsMongo } = await import('./mongo/classes/tickets.dao.js');
+            const { default: UsersMongo } = await import('./mongo/classes/users.dao.js');
             Carts = CartsMongo;
             Products = ProductsMongo;
             Messages = MessagesMongo;
             Tickets = TicketsMongo;
+            Users = UsersMongo;
             break;
         case 'FILES':
             console.log('Trabajando con archivos');
@@ -29,10 +32,12 @@ try {
             const { default: ProductsFile } = await import('./file/classes/products.dao.js');
             const { default: MessagesFile } = await import('./file/classes/messages.dao.js');
             const { default: TicketsFile } = await import('./file/classes/tickets.dao.js');
+            const { default: UsersFile } = await import('./file/classes/users.dao.js');
             Carts = CartsFile;
             Products = ProductsFile;
             Messages = MessagesFile;
             Tickets = TicketsFile;
+            Users = UsersFile;
             break;
         default:
             console.error('Tipo de persistencia no reconocido:', persistence); 
@@ -46,5 +51,6 @@ export {
     Carts,
     Products,
     Messages,
-    Tickets
+    Tickets,
+    Users
 };

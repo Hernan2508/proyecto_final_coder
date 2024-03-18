@@ -1,6 +1,7 @@
 import { Router } from "express";
-import { getProducts, getProductById, getCarts, getCartById, getChat, getRegister, getLogin, getProfile } from "../controllers/views.controller.js";
+import { getProducts, getProductById, getCarts, getCartById, getChat, getRegister, getLogin, getProfile, getUsers } from "../controllers/views.controller.js";
 import { addLogger } from '../utils/logger.js';
+import { get } from "mongoose";
 
 const router = Router();
 
@@ -25,6 +26,7 @@ router.get('/chat', privateAccess, getChat); // EP5. Renderiza el Chat
 router.get('/register', getRegister); // EP6. Renderiza el Register
 router.get('/login', publicAccess, getLogin); // EP7. Renderiza el login
 router.get('/', privateAccess, getProfile); // EP8. Renderiza el profile
+router.get('/users', getUsers);
 
 // Ruta de prueba para el logger
 router.get('/loggerTest', addLogger, (req, res) => {
